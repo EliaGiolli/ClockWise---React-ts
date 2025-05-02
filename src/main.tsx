@@ -6,15 +6,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import './index.css'
 //Pages Import
-import App from './App.tsx'
+import Dashboard from './Dashboard.tsx'
 import AboutPage from './pages/AboutPage.tsx'
 import ProductsPage from './pages/ProductsPage.tsx'
 import ContactsPage from './pages/ContactsPage.tsx'
 
+
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <App />
+    element: <Dashboard />
   },
   {
     path:'/about',

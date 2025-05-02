@@ -25,7 +25,7 @@ function Navbar() {
                 <Link to='/products'>Funzionalità</Link>
             </li>
             <li>
-                <Link to='/'>Contatti</Link>
+                <Link to='/contacts'>Contatti</Link>
             </li>
         </ul>
         <button onClick={toggleNav} className="block md:hidden">
@@ -45,7 +45,7 @@ function Navbar() {
                             <Link to='/products'>Funzionalità</Link>
                         </li>
                         <li className="textl-xl md:text-lg px-4 hover:bg-amber-500 hover:text-white hover:rounded-md">
-                            <Link to='/'>Contatti</Link>
+                            <Link to='/contacts'>Contatti</Link>
                         </li>
                     </ul>
                 </div>

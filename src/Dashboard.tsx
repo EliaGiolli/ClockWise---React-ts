@@ -1,7 +1,7 @@
 import Navbar from "./layouts/Navbar"
 
 
-function App() {
+function Dashboard() {
   
   return (
     <>
@@ -10,4 +10,4 @@ function App() {
   )
 }
 
-export default App
+export default Dashboard
