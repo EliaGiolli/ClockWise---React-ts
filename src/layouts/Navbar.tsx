@@ -1,38 +1,61 @@
 import { useState } from "react"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useThemeStore } from "../store/store";
 
+//REACT-ICONS
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
+import { CiLight } from "react-icons/ci";
+import { LuSunMoon } from "react-icons/lu";
+
 
 import Sidebar from "./Sidebar";
 
+
 function Navbar() {
+    // Mobile menu logic
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleNav = () => {
         setIsOpen(!isOpen);
     }
+    //Theme logic
+    const initialTheme = useThemeStore(state => state.initialTheme);
+    const toggleTheme = useThemeStore(state => state.toggleTheme);
+
   return (
     <>
-    <nav className="bg-white w-full min-h-20 flex justify-around items-center text-center border-b-2 border-b-gray-200 shadow-md
-     shadow-gray-500 relative">
-        <Link to='/' className="uppercase font-bold text-2xl md:text-3xl text-gray-900">ClockWise</Link>
+    <nav className={`${initialTheme === 'light' ? 'bg-white border-b-gray-200 shadow-gray-500' : 'bg-gray-900 text-gray-100 border-b-gray-950 shadow-gray-200'} 
+        w-full min-h-20 flex justify-around items-center text-center border-b-2  shadow-md relative`}>
+        {/* DESKTOP NAV */}
+        <Link to='/' className={`uppercase font-bold text-2xl md:text-3xl ${initialTheme === 'light' ? 'text-gray-900': 'text-gray-200'}`}>ClockWise</Link>
         <ul className="md:flex gap-4 hidden">
-            <li>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
                 <Link to='/about'>Chi siamo</Link>
             </li>
-            <li>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
                 <Link to='/products'>Funzionalità</Link>
             </li>
-            <li>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
                 <Link to='/contacts'>Contatti</Link>
             </li>
         </ul>
+
+        {/* THEME BUTTON */}
+        <button onClick={toggleTheme}>
+            {initialTheme === 'light' ? <CiLight size={35} className="bg-gray-700 hover:bg-gray-900 text-white px-2 rounded-lg"/> 
+            : 
+            <LuSunMoon size={35} className="bg-white text-gray-900 hover:bg-gray-300 px-2 border-2 rounded-lg" />}
+        </button>
+
+        {/* HAMBURGER-MENU BUTTON */}
         <button onClick={toggleNav} className="block md:hidden">
             {isOpen ? <RxCross1 size={35} className="bg-blue-600 text-white hover:bg-blue-700 px-2 rounded-lg"/> 
             : 
             <GiHamburgerMenu size={35} className="bg-blue-600 text-white hover:bg-blue-700 px-2 rounded-lg"/>}
         </button>
+
+        {/* MOBILE NAV */}
         {
             isOpen && (
                 <div className="bg-white flex flex-col justify-center items-center text-center w-full 
