@@ -30,13 +30,13 @@ function Navbar() {
         {/* DESKTOP NAV */}
         <Link to='/' className={`uppercase font-bold text-2xl md:text-3xl ${initialTheme === 'light' ? 'text-gray-900': 'text-gray-200'}`}>ClockWise</Link>
         <ul className="md:flex gap-4 hidden">
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'hover:bg-blue-300 hover:text-gray-900'} hover:rounded-md`}>
                 <Link to='/about'>Chi siamo</Link>
             </li>
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'hover:bg-blue-300 hover:text-gray-900'} hover:rounded-md`}>
                 <Link to='/products'>Funzionalità</Link>
             </li>
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-amber-500 hover:text-white':'hover:bg-blue-700 hover:text-white'} hover:bg-amber-500 hover:text-white hover:rounded-md`}>
+            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'hover:bg-blue-300 hover:text-gray-900'} hover:rounded-md`}>
                 <Link to='/contacts'>Contatti</Link>
             </li>
         </ul>
