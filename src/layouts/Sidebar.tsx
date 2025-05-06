@@ -12,7 +12,7 @@ function Sidebar() {
         <ul className='flex flex-col center items-center text-center gap-y-8'>
             <li className={`${initialTheme === 'light'? 'text-gray-900 hover:bg-amber-500 hover:text-white': 'text-gray-200 hover:bg-blue-700 hover:text-gray-200'}
                 text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
-                <ScrollLink to='/' smooth={true} duration={500}>Tabella orario</ScrollLink>
+                <ScrollLink to='timeSummary' smooth={true} duration={500}>Tabella orario</ScrollLink>
             </li>
             <li className={`${initialTheme === 'light'? 'text-gray-900 hover:bg-amber-500 hover:text-white': 'text-gray-200 hover:bg-blue-700 hover:text-gray-200'}
                 text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
