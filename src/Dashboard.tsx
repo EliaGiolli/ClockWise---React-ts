@@ -1,3 +1,4 @@
+import Charts from "./layouts/Charts";
 import Navbar from "./layouts/Navbar"
 import TimeSummary from "./layouts/TimeSummary"
 
@@ -13,6 +14,7 @@ function Dashboard() {
       <Navbar />
       <main className={`${initialTheme === 'light'?'bg-gray-200 text-gray-900':'bg-gray-700 text-white'} flex flex-col w-full min-h-screen p-4`}>
           <TimeSummary />
+          <Charts />
       </main>
     </>
   )

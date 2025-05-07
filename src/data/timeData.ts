@@ -8,5 +8,18 @@ export const weeklySummary = [
     { day: "Domenica", hours: 0 },
   ];
   
-  export const monthlyHours = 140;
+  export const monthlyHours = [
+    { month:'gennaio', hours:140 },
+    { month:'febbraio', hours:145 },
+    { month:'marzo', hours:140 },
+    { month:'aprile', hours:150 },
+    { month:'maggio', hours:150 },
+    { month:'giugno', hours:160 },
+    { month:'luglio', hours:160 },
+    { month:'agosto', hours:160 },
+    { month:'settembre', hours:150 },
+    { month:'ottobre', hours:140 },
+    { month:'novembre', hours:145 },
+    { month:'dicembre', hours:150 },
+  ];
   

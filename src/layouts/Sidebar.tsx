@@ -16,7 +16,7 @@ function Sidebar() {
             </li>
             <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'text-gray-200 hover:bg-blue-300 hover:text-gray-900'}
                 text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
-                <ScrollLink to='/' smooth={true} duration={500}>Grafico Presenze</ScrollLink>
+                <ScrollLink to='chartsOverview' smooth={true} duration={500}>Grafico Presenze</ScrollLink>
             </li>
             <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'text-gray-200 hover:bg-blue-300 hover:text-gray-900'}
                 text-lg md:text-xl hover:rounded-lg px-2 py-1`}>

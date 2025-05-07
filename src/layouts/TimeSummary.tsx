@@ -37,7 +37,14 @@ function TimeSummary() {
                 <div className={`${initialTheme === 'light'?'text-blue-900':'text-blue-600'} mt-6 text-lg font-semibold`}>
                     Totale settimana: {totalWeeklyHours}h
                 </div>
-                <div className={`${initialTheme ==='light'?'text-gray-500':'text-gray-400'} text-sm`}>Ore mese: {monthlyHours}h</div>
+                <h3 className={`${initialTheme === 'light'?'text-blue-900':'text-blue-600'}text-lg font-semibold my-5 mx-auto`}>Ore mensili:</h3>
+                <div className={`${initialTheme ==='light'?'text-gray-500':'text-gray-400'} text-sm grid grid-cols-2 gap-4`}>
+                    {monthlyHours.map((item)=>(
+                    <div key={item.month} className='flex justify-between border-b py-2'>
+                            <span>{item.month}</span>
+                            <span>{item.hours}</span>
+                    </div>
+                ))}</div>
             </motion.div>
         </Card>
     </Element>
