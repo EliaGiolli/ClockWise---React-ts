@@ -1,4 +1,6 @@
-export const weeklySummary = [
+import { ChartTypes, MonthlyHours } from "../types/chartTypes";
+
+export const weeklySummary:ChartTypes[] = [
     { day: "Lunedì", hours: 6 },
     { day: "Martedì", hours: 7.5 },
     { day: "Mercoledì", hours: 5 },
@@ -8,7 +10,7 @@ export const weeklySummary = [
     { day: "Domenica", hours: 0 },
   ];
   
-  export const monthlyHours = [
+  export const monthlyHours:MonthlyHours[] = [
     { month:'gennaio', hours:140 },
     { month:'febbraio', hours:145 },
     { month:'marzo', hours:140 },

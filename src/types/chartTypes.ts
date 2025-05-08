@@ -5,5 +5,6 @@ export interface ChartTypes {
 }
 
 export interface MonthlyHours{
-    "monthly hours": number
+    "month": string,
+    "hours":number
 }
