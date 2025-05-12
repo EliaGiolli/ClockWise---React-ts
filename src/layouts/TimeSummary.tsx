@@ -10,7 +10,8 @@ import Card from "../components/Card"
 
 function TimeSummary() {
 
-    const totalWeeklyHours = weeklySummary.reduce((acc, day) => acc + day.hours, 0);
+    // Fixed the issue by ensuring the hours are treated as numbers
+    const totalWeeklyHours = weeklySummary.reduce((acc, day) => acc + Number(day.hours), 0);
 
     const initialTheme = useThemeStore(state => state.initialTheme);
     

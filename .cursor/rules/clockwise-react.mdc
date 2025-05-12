@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+For 
+
+Use the new React19 as much as possible
+
+Write concise, technical TypeScript. 
+
+Follow Standard.js rules.
+
+Use functional, declarative patterns; avoid classes.
+
+Favor loops and small helper modules over duplicate code.
+
+custom hooks are preferable to implement the principle of separation of concerns(useFetch, useForm, ecc...)
+
+Use descriptive names with auxiliary verbs (e.g. isLoading, hasError).
+
+File layout: exported component → subcomponents → hooks/helpers → static content.
+
+
+For TypeScript
+Define props with interfaces/types, not prop-types.
+
+Use the function keyword for components:
+
+```ts
+interface ButtonProps {
+label: string
+onClick?: () => void
+}
+
+export function Button({ label, onClick }: ButtonProps) {
+return <button onClick={onClick}>{label}</button>
+}
+```
+
+Call hooks (useState, useEffect, etc.) only at the top level.
+
+Avoid inline functions in JSX—pull handlers out or wrap in useCallback.
+
+Favor composition (render props, children) over inheritance.
+
+Use React.lazy + Suspense for code splitting.
+
+Use refs only for direct DOM access.
+
+Prefer controlled components for forms.
+
+Implement an error boundary component.
+
+Clean up effects in useEffect to prevent leaks.
+
+
+Use guard clauses (early returns) for error handling.
