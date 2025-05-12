@@ -4,6 +4,7 @@ import { WorkLogEntry } from "./workLogTypes";
 export type ModalFormProps = {
   isOpen?: boolean;
   closeModal: () => void;
-  onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
-  table: Table<WorkLogEntry>
+  //react hook form expects an arrow function with a data property as argument
+  onSubmit: (data: WorkLogEntry) => void;
+  table: Table<WorkLogEntry>;
 };

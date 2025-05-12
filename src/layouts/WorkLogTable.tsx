@@ -4,15 +4,19 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import ModalCard from "./ModalCard";
 //internal imports
-import { workLogData } from "../data/workLog"
+import { WorkLogEntry } from "../types/workLogTypes"; 
 import { useThemeStore } from "../store/store";
+import { useAddEntry } from "../custom hooks/useAddEntry";
 //External Libraries
 import { IoGitNetworkOutline } from "react-icons/io5";
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table';
 
+
 function WorkLogTable() {
+
+  const { data,addEntry }= useAddEntry();
 
   const initialTheme = useThemeStore(state => state.initialTheme);
 
@@ -38,10 +42,16 @@ function WorkLogTable() {
   );
 
   const table = useReactTable({
-    data: workLogData,
+    //now it uses the updated state from the custom hook
+    data,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
+
+  const handleAddEntry = (entry: WorkLogEntry) => {
+    addEntry(entry);  // it adds a new entry and saves it into the local storage
+    setIsOpen(false);  
+  };
 
   return (
     <>
@@ -94,7 +104,8 @@ function WorkLogTable() {
         isOpen && <ModalCard 
                   table={table}
                   isOpen={isOpen}
-                  closeModal={() => setIsOpen(false)} 
+                  closeModal={() => setIsOpen(false)}
+                  onSubmit={handleAddEntry} 
                   />
       }
     </>
