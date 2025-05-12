@@ -1,4 +1,4 @@
-import { CardProps} from '../types/cardType'
+import { CardProps} from '../types/genericTypes'
 
 function Card({children,className}:CardProps) {
   return (

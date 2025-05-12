@@ -10,7 +10,7 @@ import { LuSunMoon } from "react-icons/lu";
 
 
 import Sidebar from "./Sidebar";
-
+import Button from "../components/Button";
 
 function Navbar() {
     // Mobile menu logic
@@ -42,18 +42,18 @@ function Navbar() {
         </ul>
 
         {/* THEME BUTTON */}
-        <button onClick={toggleTheme}>
+        <Button onClick={toggleTheme} variant="default">
             {initialTheme === 'light' ? <CiLight size={35} className="bg-gray-700 hover:bg-gray-900 text-white px-2 rounded-lg"/> 
             : 
             <LuSunMoon size={35} className="bg-white text-gray-900 hover:bg-gray-300 px-2 border-2 rounded-lg" />}
-        </button>
+        </Button>
 
         {/* HAMBURGER-MENU BUTTON */}
-        <button onClick={toggleNav} className="block md:hidden">
+        <Button onClick={toggleNav} variant='hamburgerBtn'>
             {isOpen ? <RxCross1 size={35} className="bg-blue-600 text-white hover:bg-blue-700 px-2 rounded-lg"/> 
             : 
             <GiHamburgerMenu size={35} className="bg-blue-600 text-white hover:bg-blue-700 px-2 rounded-lg"/>}
-        </button>
+        </Button>
 
         {/* MOBILE NAV */}
         {
