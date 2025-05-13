@@ -26,15 +26,15 @@ function WorkLogTable() {
     //the new Tanstack React-table API uses accessorKey and header instead of accessor and Header inside the columns
     () => [
       {
-        header: 'Date',
+        header: 'Data',
         accessorKey: 'date',
       },
       {
-        header: 'Hours',
+        header: 'Ore',
         accessorKey: 'hours',
       },
       {
-        header: 'Activity',
+        header: 'Attività',
         accessorKey: 'activity',
       },
     ],
@@ -92,12 +92,15 @@ function WorkLogTable() {
               ))}
             </tbody>
           </motion.table>
-          <Button 
+          <div className="flex justify-center mt-4">
+            <Button 
               variant="customBtn" 
               onClick={() => {setIsOpen(true)}}
-              >
+              className="px-4 py-2 text-lg"
+            >
               Aggiungi le tue presenze
-          </Button>
+            </Button>
+          </div>
         </Card>
       </Element>
       {

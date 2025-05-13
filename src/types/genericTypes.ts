@@ -5,3 +5,8 @@ export type CardProps ={
     children?: ReactNode,
     variantType?: string
 }
+
+export interface FooterProps {
+    className?: string; // Accept className prop
+  }
+  

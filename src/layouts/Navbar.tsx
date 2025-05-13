@@ -9,7 +9,6 @@ import { CiLight } from "react-icons/ci";
 import { LuSunMoon } from "react-icons/lu";
 
 
-import Sidebar from "./Sidebar";
 import Button from "../components/Button";
 
 function Navbar() {
@@ -76,7 +75,6 @@ function Navbar() {
         }
        
     </nav>
-    <Sidebar />
     </>
   )
 }

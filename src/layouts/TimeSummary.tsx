@@ -16,7 +16,7 @@ function TimeSummary() {
     const initialTheme = useThemeStore(state => state.initialTheme);
     
   return (
-    <Element name='timeSummary'>
+    <Element name='timeSummary' className='scroll-mt-20'>
         <Card className={`${initialTheme === 'light'?'bg-white shadow-gray-900':'bg-gray-900 shadow-gray-200'} w-full max-w-2xl p-8 rounded-lg shadow-lg mx-auto`}>
             <motion.div 
                 initial={{opacity:0}}

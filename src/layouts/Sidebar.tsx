@@ -2,27 +2,35 @@ import { Link as ScrollLink } from 'react-scroll'
 import { useThemeStore } from '../store/store'
 
 function Sidebar() {
-    //theme
-    const initialTheme = useThemeStore(state => state.initialTheme);
-   
+  const initialTheme = useThemeStore(state => state.initialTheme);
 
   return (
-    <nav className={`${initialTheme === 'light' ? 'bg-white border-r-gray-200' : 'bg-gray-900 border-r-gray-200'}
-        hidden md:flex flex-col justify-center items-center max-w-1/3 min-h-screen absolute z-50 p-8 border-r-2`}>
-        <ul className='flex flex-col center items-center text-center gap-y-8'>
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'text-gray-200 hover:bg-blue-300 hover:text-gray-900'}
-                text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
-                <ScrollLink to='timeSummary' smooth={true} duration={500}>Tabella orario</ScrollLink>
-            </li>
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'text-gray-200 hover:bg-blue-300 hover:text-gray-900'}
-                text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
-                <ScrollLink to='chartsOverview' smooth={true} duration={500}>Grafico Presenze</ScrollLink>
-            </li>
-            <li className={`textl-xl md:text-lg px-4 ${initialTheme ==='light' ? 'hover:bg-blue-900 hover:text-white':'text-gray-200 hover:bg-blue-300 hover:text-gray-900'}
-                text-lg md:text-xl hover:rounded-lg px-2 py-1`}>
-                <ScrollLink to='working-log-table' smooth={true} duration={500}>Tabella Turni</ScrollLink>
-            </li>
-        </ul>
+    <nav
+      className={`
+        ${initialTheme === 'light' ? 'bg-white border-r-gray-200 shadow-gray-500' : 'bg-gray-900 border-r-gray-200 text-gray-200 shadow-gray-200'}
+        hidden md:flex flex-col justify-start items-center w-64 h-screen sticky top-0 z-40 p-8 border-r-2 rounded-md shadow-md
+      `}
+    >
+      <ul className="flex flex-col items-center gap-y-8 w-full">
+        {[
+          { to: 'timeSummary', label: 'Tabella orario' },
+          { to: 'chartsOverview', label: 'Grafico Presenze' },
+          { to: 'working-log-table', label: 'Tabella Turni' },
+        ].map(({ to, label }) => (
+          <li
+            key={to}
+            className={`w-full text-center text-lg md:text-xl hover:rounded-lg px-2 py-1 cursor-pointer
+              ${initialTheme === 'light'
+                ? 'hover:bg-blue-900 hover:text-white'
+                : 'hover:bg-blue-300 hover:text-gray-900'}
+            `}
+          >
+            <ScrollLink to={to} smooth={true} duration={500} offset={-80}>
+              {label}
+            </ScrollLink>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }
