@@ -1,11 +1,9 @@
-import Charts from "./layouts/Charts";
-import Navbar from "./layouts/Navbar"
-import TimeSummary from "./layouts/TimeSummary"
-import WorkLogTable from "./layouts/WorkLogTable";
-import Sidebar from "./layouts/Sidebar";
-import Footer from "./layouts/Footer";
+import Charts from "../layouts/Charts";
+import TimeSummary from "../layouts/TimeSummary"
+import WorkLogTable from "../layouts/WorkLogTable";
+import Sidebar from "../layouts/Sidebar";
 
-import { useThemeStore } from "./store/store"
+import { useThemeStore } from "../store/store"
 
 
 
@@ -15,7 +13,6 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar />
       <main className={`${initialTheme === 'light'?'bg-gray-200 text-gray-900':'bg-gray-700 text-white'} flex flex-col w-full min-h-screen p-4 pb-20`}>
         <div className="flex flex-row flex-1">
           <Sidebar />
@@ -27,7 +24,6 @@ function Dashboard() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }
