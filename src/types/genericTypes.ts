@@ -7,3 +7,7 @@ export interface FooterProps {
     variant?: "default" | "summaryCard" | 'productCard';
   };
   
+  //React provides with types to assign a type to an HTML element
+export type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
+  variant: 'customBtn' | 'hamburgerBtn' | 'default';
+};

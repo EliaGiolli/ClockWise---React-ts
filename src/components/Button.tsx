@@ -1,9 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-//React provides with types to assign a type to an HTML element
-type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
-    variant: 'customBtn' | 'hamburgerBtn' | 'default';
-};
+import { ButtonProps } from '../types/genericTypes'
 
 function Button({variant, children, onClick,...props}: ButtonProps) {
   return (
