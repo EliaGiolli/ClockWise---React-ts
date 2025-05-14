@@ -1,16 +1,33 @@
-# ClockWise
+# 🕒 ClockWise – Smart Work & On-site Time Tracker
 
-ClockWise is a modern solution for managing work hours, analyzing weekly and monthly data, and accurately recording business activities. This application is built using React and TypeScript, following best practices for a clean and maintainable codebase.
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)
+![React](https://img.shields.io/badge/React-19.x-61DAFB.svg)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-4.x-38B2AC.svg)
+![Vite](https://img.shields.io/badge/Vite-6.x-646CFF.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Table of Contents
+> **ClockWise** is a modern and intuitive solution to manage work hours 🕒, analyze productivity 📊, and track on-site 🏢 or remote work 🏠 with ease. Built with **React 19**, **TypeScript**, and **TailwindCSS 4**, it focuses on scalability, performance, and user-friendly design.
 
-- [Installation](#installation)
-- [Libraries Used](#libraries-used)
-- [Pages Overview](#pages-overview)
-  - [About Page](#about-page)
-  - [Product Page](#product-page)
-  - [Dashboard](#dashboard)
+---
 
+## 📦 Features
+
+- 📍 **Smart Work & Office Check-ins**  
+  Log whether you worked remotely or on-site, with accurate timestamps.
+
+- 📅 **Visual Reports**  
+  Get clean, responsive weekly/monthly charts showing your productivity.
+
+- 🧾 **Work Logs**  
+  Record your work sessions with descriptions, hours, and tasks.
+
+- 🎛️ **Dynamic Dashboard**  
+  Interactive UI built with reusable components and Zustand for state management.
+
+- 🌙 **Dark Mode**  
+  Automatic light/dark theme support.
+
+---
 ## Installation
 
 To get started with ClockWise, follow these steps:
@@ -41,21 +58,25 @@ To get started with ClockWise, follow these steps:
    npm run preview
    ```
    
-## Libraries Used
+| Tech                    | Role                         |
+| ----------------------- | ---------------------------- |
+| ⚛️ React 19             | UI library                   |
+| 🟦 TypeScript           | Static typing                |
+| 🎨 TailwindCSS 4        | Utility-first styling        |
+| 🛣 React Router 7       | Page routing                 |
+| 📊 Recharts             | Data visualization           |
+| 🧠 Zustand              | Global state management      |
+| 🧾 React Hook Form      | Form handling and validation |
+| 🌀 Framer Motion        | Animations and transitions   |
+| 🧰 Lucide / React Icons |                              |
 
-- **React 19 + TypeScript**: For building robust UI with static type checking.
-- **Vite**: Fast dev server and build tool.
-- **Tailwind CSS 4 + CVA + clsx**: Utility-first styling with class management helpers.
-- **Zustand**: Lightweight state management.
-- **React Router v7**: For routing and navigation.
-- **Framer Motion** & **Motion One**: Smooth animations and transitions.
-- **React Hook Form**: Efficient form management and validation.
-- **TanStack Table**: Fully customizable table library.
-- **Recharts**: For data visualization and responsive charts.
-- **Lucide React** & **React Icons**: Icon libraries.
-- **Headless UI**: Accessible UI components.
-- **React Scroll**: Smooth scrolling between sections.
 
+## Development & Tooling
+
+- **Vite** for blazing-fast dev server
+- **TypeScript** strict mode enabled
+- **ESLint** for code linting
+- **typescript-eslint** for type-aware linting
 
 ## Pages Overview
 
@@ -67,22 +88,20 @@ The About Page serves as the landing page for the application. It provides an in
   - **SummaryCards**: Displays three summary cards that highlight key features of the application, such as monthly hour management, graphical analysis, and presence forms.
   - **FeatureTabs**: Allows users to switch between different features of the application, providing detailed descriptions and links to further explore products.
 
-### Product Page
+### 🛠 Product Page (ProductPage.tsx) 
+This is the core view of the app, bringing together all key data and features in a single unified dashboard.
 
-The Product Page showcases the various products offered by ClockWise. It includes:
+- **🧭 Sidebar**: Navigation panel for switching sections
 
-- **Charts**: Visual representations of data related to work hours and productivity.
-- **Time Summary**: A summary of time logged by users.
-- **Work Log Table**: A table that displays logged work entries, allowing users to add new entries through a modal form.
+- **📈 Charts**: Visual summaries of time worked (bar, pie, line charts via Recharts)
 
-### Dashboard
+- **🕒 Time Summary**: Total and average hours worked, split by category
 
-The Dashboard is the main interface for users to interact with the application. It includes:
+- **🧾 Work Log Table**: Table with all work sessions (add/edit via modal form)
 
-- **Sidebar**: Navigation links to different sections of the application.
-- **Time Summary**: A quick overview of logged hours.
-- **Charts**: Graphical representations of work data.
-- **Work Log Table**: A detailed table of work logs, with functionality to add new entries via a modal.
+- **🌗 Dark Mode Toggle**: Light and dark themes, persisted in state
+
+✅ Note: This page acts as both the product showcase and the user dashboard — it’s a single source of truth for work tracking and data insights.
 
 ## Contributing
 
