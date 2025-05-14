@@ -40,18 +40,22 @@ To get started with ClockWise, follow these steps:
    ```bash
    npm run preview
    ```
-
+   
 ## Libraries Used
 
-- **React**: A JavaScript library for building user interfaces.
-- **TypeScript**: A superset of JavaScript that adds static types.
-- **React Router**: For routing and navigation.
-- **Framer Motion**: For animations and transitions.
-- **React Hook Form**: For managing form state and validation.
-- **Lucide React**: For icons.
-- **Tailwind CSS**: For styling and layout.
-- **Zustand**: For state management.
-- **TanStack Table**: For building tables with advanced features.
+- **React 19 + TypeScript**: For building robust UI with static type checking.
+- **Vite**: Fast dev server and build tool.
+- **Tailwind CSS 4 + CVA + clsx**: Utility-first styling with class management helpers.
+- **Zustand**: Lightweight state management.
+- **React Router v7**: For routing and navigation.
+- **Framer Motion** & **Motion One**: Smooth animations and transitions.
+- **React Hook Form**: Efficient form management and validation.
+- **TanStack Table**: Fully customizable table library.
+- **Recharts**: For data visualization and responsive charts.
+- **Lucide React** & **React Icons**: Icon libraries.
+- **Headless UI**: Accessible UI components.
+- **React Scroll**: Smooth scrolling between sections.
+
 
 ## Pages Overview
 
