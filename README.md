@@ -57,7 +57,9 @@ To get started with ClockWise, follow these steps:
    ```bash
    npm run preview
    ```
-   
+
+## 🧩 Tech Stack
+
 | Tech                    | Role                         |
 | ----------------------- | ---------------------------- |
 | ⚛️ React 19             | UI library                   |
@@ -80,7 +82,7 @@ To get started with ClockWise, follow these steps:
 
 ## Pages Overview
 
-### About Page
+### 🔎 About Page
 
 The About Page serves as the landing page for the application. It provides an introduction to ClockWise and its features.
 
