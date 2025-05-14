@@ -56,7 +56,7 @@ function WorkLogTable() {
   return (
     <>
       <Element name="working-log-table">
-        <Card className={`${initialTheme === 'light'?'bg-white shadow-gray-900':'bg-gray-900 shadow-gray-200'} w-full max-w-2xl p-8 rounded-lg shadow-lg mx-auto`}>
+        <Card variant="productCard">
             <div className='flex justify-between items-center px-3 mb-10'>
               <h2 className={`text-2xl md:text-3xl ${initialTheme ==='light'?'text-blue-900':'text-blue-500'} capitalize`}>Tabella Presenze</h2>
               <IoGitNetworkOutline  className={`${initialTheme === 'light'?'text-blue-600 hover:text-blue-900':'text-blue-300 hover:text-blue-500'} text-2xl`} />

@@ -17,7 +17,7 @@ function TimeSummary() {
     
   return (
     <Element name='timeSummary' className='scroll-mt-20'>
-        <Card className={`${initialTheme === 'light'?'bg-white shadow-gray-900':'bg-gray-900 shadow-gray-200'} w-full max-w-2xl p-8 rounded-lg shadow-lg mx-auto`}>
+        <Card variant="productCard">
             <motion.div 
                 initial={{opacity:0}}
                 animate={{opacity:1}}

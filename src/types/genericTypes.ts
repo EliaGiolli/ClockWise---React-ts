@@ -1,12 +1,9 @@
-import { type ReactNode } from "react"
-
-export type CardProps ={
-    className?:string,
-    children?: ReactNode,
-    variantType?: string
-}
 
 export interface FooterProps {
     className?: string; // Accept className prop
   }
+  
+ export type CardProps = React.HtmlHTMLAttributes<HTMLDivElement> & {
+    variant?: "default" | "summaryCard" | 'productCard';
+  };
   
