@@ -22,15 +22,8 @@ function FeatureTabs() {
           <Button
             variant='customBtn'
             key={feature.id}
+            active={activeTab === feature.id}
             onClick={() => setActiveTab(feature.id)}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition-all 
-              ${activeTab === feature.id 
-                ? initialTheme === 'light' 
-                  ? 'bg-blue-900 text-white' 
-                  : 'bg-blue-500 text-white' 
-                : initialTheme === 'light' 
-                  ? 'bg-gray-100 text-blue-900 hover:bg-blue-200' 
-                  : 'bg-gray-800 text-blue-200 hover:bg-blue-400'}`}
           >
             {feature.title}
           </Button>
