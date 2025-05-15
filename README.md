@@ -103,6 +103,19 @@ This is the core view of the app, bringing together all key data and features in
 
 - **🌗 Dark Mode Toggle**: Light and dark themes, persisted in state
 
+### Contacts Page (contacts.tsx)
+
+The **Contacts** page in ClockWise provides users with a direct way to reach out for support, feedback, or general inquiries about the application.
+
+#### Key Features
+
+- **Contact Form**: Allows users to send messages directly to the support or development team. Includes fields for name, email, subject, and message.
+- **Form Validation**: Uses `React Hook Form` to handle input validation, ensuring required fields are properly filled out.
+- **Zustand Integration**: Maintains form state and success/error messages via global store for a smoother user experience.
+- **Dynamic Theming**: Supports light and dark mode, consistent with the rest of the app, adjusting styles and colors accordingly.
+- **Visual Feedback**: Displays success or error messages with smooth animations powered by `Framer Motion` for engaging interactions.
+
+
 ✅ Note: This page acts as both the product showcase and the user dashboard — it’s a single source of truth for work tracking and data insights.
 
 ## Contributing
